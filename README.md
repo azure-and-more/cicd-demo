@@ -1,40 +1,24 @@
-docker-hello-world
-==================
+hello-world
+===========
 
-**This image will be deprecated soon. Please use `dockercloud/hello-world` instead:**
-https://hub.docker.com/r/dockercloud/hello-world/
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 
 Sample docker image to test docker deployments
 
+## Running locally
 
-Usage
------
+Build and run using Docker Compose:
 
-To create the image `tutum/hello-world`, execute the following command on the docker-hello-world folder:
-
-	docker build -t tutum/hello-world .
-
-You can now push your new image to the registry:
-
-	sudo docker push tutum/hello-world
+	$ git clone https://github.com/docker/dockercloud-hello-world
+	$ cd dockercloud-hello-world
+	$ docker-compose up
 
 
-Running your Hello World docker image
--------------------------------------
+## Deploying to Docker Cloud
 
-Start your image:
+[Install the Docker Cloud CLI](https://docs.docker.com/docker-cloud/tutorials/installing-cli/)
 
-	sudo docker run -d -p 80 tutum/hello-world
-
-It will print the new container ID (like `d35bf1374e88`). Get the allocated external port:
-
-	sudo docker port d35bf1374e88 80
-
-It will print the allocated port (like 4751). Test your deployment:
-
-	curl http://localhost:4751/
-
+	$ docker login
+	$ docker-cloud stack up
 
 Hello world!
-
-**by http://www.tutum.co**

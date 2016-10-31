@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Hello world!</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style>
 	body {
 		background-color: white;
@@ -44,9 +44,9 @@
 	<?php
 	}
 
-	if($_ENV["TUTUM_AUTH"]) {
+	if($_ENV["DOCKERCLOUD_AUTH"]) {
 		?>
-		<h3>I have Tutum API powers!</h3>
+		<h3>I have Docker Cloud API powers!</h3>
 		<?php
 	}
 	?>
